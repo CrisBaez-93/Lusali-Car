@@ -1,0 +1,263 @@
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #f5cb5c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #242423;
+    color: #e8eddf;
+    font-family: "Ubuntu", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-apointment {
+    background-color: var(--accent-color);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ------ CONTAINER ----- */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url(img/car-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image .7s ease-in-out;
+}
+
+.header,
+.content,
+.content-info {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* ------ HEADER ----- */
+
+.header {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 75px;
+}
+
+.menu-list {
+    margin: 0;
+}
+
+.menu-list__item {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu-list__item:last-child {
+    margin-right: 0;
+}
+
+/* ------ CONTENT ----- */
+
+.content {
+    max-width: var(--max-width);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    padding: 2rem;
+}
+
+.slideButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.slideButton img {
+    height: 30px;
+    width: 30px;
+}
+
+.prevSlide {
+    left: -3rem;
+}
+
+.nextSlide {
+    right: -3rem;
+}
+
+.content__claim {
+    font-size: 50px;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.content__subclaim {
+    font-size: 32;
+    margin: 0.5rem 0;
+    margin-bottom: 2rem;
+}
+
+/* ------ INFO ----- */
+
+.content-info {
+    max-width: var(--max-width);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    margin: 1rem;
+    left: 30%;
+    top: 30%;
+    height: 400px;
+    width: 50%;
+    background: #242423;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.55);
+    box-shadow: 10px 10px 5px -3px rgba(0, 0, 0, 0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-widget {
+    width: 90%;
+    height: 30%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.info-widget__title {
+    color: var(--accent-color);
+}
+
+
+/* ------ RS ----- */
+
+@media screen and (max-width: 1280px) {
+
+    .header,
+    .content-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .menu-list {
+        margin-top: 2rem;
+    }
+}
+
+/* ------ FOOTER ----- */
+
+footer {
+    width: 90%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    float: center;
+    margin: auto;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+footer hr {
+    height: 5px;
+    background-color: var(--accent-color);
+    border: 0;
+}
+
+.footer-cris {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cris-info {
+    height: 100px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cris-info a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.cris-info a img {
+    width: 30%;
+}
+
+.info-web {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cris-vectors {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cris-vectors p {
+    text-align: center;
+}
+
+.cris-vectors img {
+    height: 100%;
+    margin: 5px;
+}
